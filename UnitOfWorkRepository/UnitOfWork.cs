@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
-using HospitalManagement.DAL;
+using CourseAssignDLL; 
 
 #endregion
 
@@ -20,7 +20,7 @@ namespace UnitOfWorkRepository
 
         public UnitOfWork()
         {
-            _context = new HospitalDbContext();
+            _context = new CourseAssignDbContext();
             _instanceId = Guid.NewGuid();
             _context.Configuration.LazyLoadingEnabled = false;
         }
